@@ -1,0 +1,6 @@
+def build(bld):
+	bld(features='cprogram cxx',
+		target='manix-wm',
+		source = bld.glob("src/*.cpp"),
+		includes=['src'],
+		uselib=['XCB', 'BOOST_SIGNALS'])
